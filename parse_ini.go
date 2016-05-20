@@ -68,7 +68,6 @@ func (fd *fileDetails) load() error {
 }
 
 func (fd *fileDetails) ReadKey(section, key, defaultVal string) string {
-	glog.V(3).Infof("Key to be read %s", key)
 	fd.lock.RLock()
 	defer fd.lock.RUnlock()
 
